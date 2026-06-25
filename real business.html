@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHIYODA Global | Precision Wire Harness Solutions</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #0A2540;
+      color: #FFFFFF;
+      scroll-behavior: smooth;
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      background-color: #071B34;
+      color: #FFFFFF;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    .site-wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      padding: 24px 32px;
+      position: sticky;
+      top: 0;
+      background: rgba(10, 37, 64, 0.96);
+      backdrop-filter: blur(16px);
+      z-index: 20;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: #00C853;
+      border-radius: 50%;
+      box-shadow: 0 0 18px rgba(0,200,83,0.35);
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav li a {
+      color: #E8EFF8;
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+
+    nav li a:hover {
+      color: #00C853;
+      transform: translateY(-1px);
+    }
+
+    main {
+      flex: 1;
+      width: 100%;
+    }
+
+    .hero {
+      display: grid;
+      align-items: center;
+      min-height: 84vh;
+      padding: 72px 32px;
+      max-width: 1280px;
+      margin: 0 auto;
+      gap: 48px;
+    }
+
+    .hero-copy {
+      max-width: 700px;
+    }
+
+    .hero-copy h1 {
+      margin: 0 0 22px;
+      font-size: clamp(3rem, 5vw, 4.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: #FFFFFF;
+    }
+
+    .hero-copy p {
+      margin: 0 0 28px;
+      max-width: 640px;
+      font-size: 1.05rem;
+      color: #D6E8FA;
+    }
+
+    .hero-copy .hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 28px;
+      background: #00C853;
+      color: #0A2540;
+      border: none;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      box-shadow: 0 18px 45px rgba(0,200,83,0.22);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .hero-copy .hero-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 50px rgba(0,200,83,0.28);
+    }
+
+    .hero-visual {
+      display: grid;
+      justify-items: end;
+      align-items: center;
+    }
+
+    .hero-panel {
+      width: 100%;
+      max-width: 520px;
+      background: linear-gradient(180deg, rgba(10,37,64,0.96), rgba(5,18,39,0.9));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+    }
+
+    .hero-panel h2 {
+      margin: 0 0 16px;
+      font-size: 1.75rem;
+      color: #FFFFFF;
+    }
+
+    .hero-panel ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .hero-panel li {
+      font-size: 1rem;
+      color: #B8D7F0;
+    }
+
+    section {
+      padding: 72px 32px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      margin: 0 0 18px;
+      font-size: 2.2rem;
+      letter-spacing: -0.03em;
+      color: #FFFFFF;
+    }
+
+    .section-subtitle {
+      margin: 0 0 38px;
+      max-width: 760px;
+      color: #B8D7F0;
+      font-size: 1rem;
+    }
+
+    #about .about-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 36px;
+      align-items: start;
+    }
+
+    .about-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+    }
+
+    .about-card p {
+      margin: 0 0 16px;
+      color: #D3E4FC;
+      line-height: 1.9;
+    }
+
+    .about-card ul {
+      margin: 0;
+      padding-left: 20px;
+      color: #E2F4D4;
+      line-height: 1.9;
+    }
+
+    .about-card ul li {
+      margin-bottom: 10px;
+    }
+
+    #products .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .product-card {
+      background: linear-gradient(180deg, rgba(10,37,64,0.98), rgba(10,37,64,0.88));
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 28px;
+      border-radius: 24px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 80px rgba(0,0,0,0.24);
+      border-color: rgba(0,200,83,0.35);
+    }
+
+    .product-card h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #FFFFFF;
+    }
+
+    .product-card p {
+      margin: 0;
+      color: #C9DCF2;
+      line-height: 1.8;
+    }
+
+    #capabilities .capabilities-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .capability-summary {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 32px;
+    }
+
+    .capability-summary p {
+      margin: 0 0 20px;
+      color: #D4E7FF;
+      line-height: 1.85;
+    }
+
+    .capability-summary .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .capability-summary .badge-list li {
+      background: rgba(0,200,83,0.12);
+      color: #E7FFF4;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      border: 1px solid rgba(0,200,83,0.24);
+    }
+
+    .capability-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .capability-table th,
+    .capability-table td {
+      padding: 18px 20px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: #E5F1FF;
+      font-size: 0.98rem;
+    }
+
+    .capability-table th {
+      background: rgba(255,255,255,0.06);
+      font-weight: 600;
+    }
+
+    .capability-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    #contact .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .contact-info,
+    .contact-form-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+    }
+
+    .contact-info h3,
+    .contact-form-card h3 {
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-size: 1.5rem;
+      color: #FFFFFF;
+    }
+
+    .contact-info p,
+    .contact-info address {
+      margin: 0 0 16px;
+      color: #D8E8FB;
+      line-height: 1.9;
+    }
+
+    .contact-info strong {
+      color: #FFFFFF;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .contact-form-card form {
+      display: grid;
+      gap: 18px;
+    }
+
+    .contact-form-card label {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #CAD9F5;
+    }
+
+    .contact-form-card input,
+    .contact-form-card select,
+    .contact-form-card textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      padding: 14px 16px;
+      color: #F7FBFF;
+      outline: none;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .contact-form-card input:focus,
+    .contact-form-card select:focus,
+    .contact-form-card textarea:focus {
+      background: rgba(255,255,255,0.12);
+      border-color: #00C853;
+    }
+
+    .contact-form-card textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .contact-form-card .form-note {
+      font-size: 0.92rem;
+      color: #A7BEED;
+      margin-top: -8px;
+    }
+
+    .contact-form-card button {
+      align-self: flex-start;
+      width: fit-content;
+      padding: 16px 32px;
+      border-radius: 999px;
+      border: none;
+      background: #00C853;
+      color: #0A2540;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .contact-form-card button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 32px rgba(0,200,83,0.28);
+    }
+
+    footer {
+      padding: 40px 32px;
+      background: #081B35;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .footer-copy {
+      color: #9DB9E6;
+      font-size: 0.95rem;
+    }
+
+    .footer-locations {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .location-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 18px 20px;
+    }
+
+    .location-card h4 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      color: #FFFFFF;
+    }
+
+    .location-card p {
+      margin: 0;
+      color: #B5D1FD;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1024px) {
+      .hero,
+      #about .about-grid,
+      #products .product-grid,
+      #capabilities .capabilities-grid,
+      #contact .contact-grid,
+      .footer-container,
+      .footer-locations {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 20px 24px;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        padding: 44px 20px 60px;
+      }
+
+      section {
+        padding: 52px 20px;
+      }
+
+      .hero-copy h1 {
+        font-size: 2.8rem;
+      }
+
+      .hero-panel {
+        padding: 26px;
+      }
+
+      .product-card,
+      .about-card,
+      .contact-info,
+      .contact-form-card,
+      .capability-summary {
+        padding: 24px;
+      }
+
+      .capability-table th,
+      .capability-table td {
+        padding: 14px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-wrapper">
+    <header>
+      <div class="nav-container">
+        <a class="brand" href="#home">CHIYODA Global</a>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#capabilities">Capabilities</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-copy">
+          <h1>Precision Wire Harness Solutions Since 1969</h1>
+          <p>Delivering international engineering excellence for automotive, medical, office automation, high-end consumer products and critical industrial systems. CHIYODA Global blends heritage manufacturing with modern lean production.</p>
+          <a class="hero-button" href="#contact">Request a Quote</a>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-panel">
+            <h2>Global Engineering, Local Execution</h2>
+            <ul>
+              <li>Japan headquarters coordinating global standards and quality.</li>
+              <li>Hong Kong office supporting sales, export logistics and customer service.</li>
+              <li>Advanced manufacturing facilities in Dongguan and Jiaxing for high-volume production.</li>
+              <li>Rigorous product validation and eco-friendly manufacturing processes.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <h2 class="section-title">About CHIYODA Group</h2>
+        <p class="section-subtitle">Founded in 1969 in Aichi, Japan, CHIYODA Group combines five decades of legacy with contemporary global manufacturing, serving international OEMs and technical partners with reliable wire harness systems.</p>
+        <div class="about-grid">
+          <div class="about-card">
+            <p>Founded in 1969 in Aichi, Japan, CHIYODA Group has more than 50 years of expertise in precision wire harness manufacturing. Our heritage is built on quality, customer satisfaction, and continuous innovation in global production.</p>
+            <p>Total group sales reach 10 Billion JPY, supporting major global brands through integrated engineering, design validation, and advanced factory management.</p>
+          </div>
+          <div class="about-card">
+            <ul>
+              <li>Global footprint with Japan headquarters and Hong Kong regional office.</li>
+              <li>Advanced production plants in Dongguan and Jiaxing with 15,000 m² capacity.</li>
+              <li>220+ skilled staff delivering consistent quality and rapid turn-key execution.</li>
+              <li>Mission: Customer Satisfaction First with eco-friendly manufacturing and compliance-focused supply chains.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="products">
+        <h2 class="section-title">Products</h2>
+        <p class="section-subtitle">Our product portfolio spans high-reliability harness systems for automotive, medical, office automation and premium consumer segments with robust design, testing and certification coverage.</p>
+        <div class="product-grid">
+          <article class="product-card">
+            <h3>Automotive & New Energy Harnesses</h3>
+            <p>Air conditioning wiring, tail lights, EV charging guns and advanced harness systems. Fully IATF 16949:2016 compliant for modern automotive manufacturing.</p>
+          </article>
+          <article class="product-card">
+            <h3>Medical & Laboratory Equipment</h3>
+            <p>Precision assemblies for blood glucose monitors, diabetes testing equipment and urine analyzers designed for medical reliability and repeatable performance.</p>
+          </article>
+          <article class="product-card">
+            <h3>Office Automation Wiring</h3>
+            <p>High-durability crimping solutions for copiers and printers trusted by Konica Minolta, Ricoh, RISO, and Fuji Xerox with long-life precision harnesses.</p>
+          </article>
+          <article class="product-card">
+            <h3>High-End Consumer & Peripherals</h3>
+            <p>Luxury peripheral cables, 4K/8K video split solutions, high-fidelity audio wiring, ATM harnesses and gaming peripheral interconnects with premium engineering.</p>
+          </article>
+        </div>
+      </section>
+      <section id="capabilities">
+        <h2 class="section-title">Manufacturing Capability</h2>
+        <p class="section-subtitle">Operating a 15,000 m² plant with over 220 skilled staff, CHIYODA Group delivers complex assemblies with fully automated crimping, cross-section validation, environmental testing and quality management systems.</p>
+        <div class="capabilities-grid">
+          <div class="capability-summary">
+            <p>Our manufacturing combines advanced automation and rigorous quality control to support demanding industries. Dedicated equipment and process control ensure consistency in production and fast time-to-market.</p>
+            <ul class="badge-list">
+              <li>IATF 16949:2016</li>
+              <li>ISO 9001</li>
+              <li>ISO 14001</li>
+              <li>UL</li>
+            </ul>
+          </div>
+          <table class="capability-table">
+            <thead>
+              <tr>
+                <th>Equipment</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>KOMAX fully automatic crimping machines</td>
+                <td>Precision high-volume processing for automotive and industrial harnesses.</td>
+              </tr>
+              <tr>
+                <td>JAM fully automatic crimping machines</td>
+                <td>Reliable automated assembly for medical, office and consumer wiring products.</td>
+              </tr>
+              <tr>
+                <td>SHINMAYWA fully automatic crimping machines</td>
+                <td>Robust automation for high-speed harness production and process consistency.</td>
+              </tr>
+              <tr>
+                <td>TYCO AMP fully automatic crimping machines</td>
+                <td>Industry-leading tooling for secure and repeatable connections.</td>
+              </tr>
+              <tr>
+                <td>Cross-section analyzers</td>
+                <td>Detailed internal validation of crimp integrity and wire structure.</td>
+              </tr>
+              <tr>
+                <td>Salt spray testers</td>
+                <td>Environmental durability testing for corrosion resistance and long life.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Submit your RFQ and technical requirements to discuss project specifications, volume forecasts and delivery timelines.</p>
+        <div class="contact-grid">
+          <aside class="contact-info">
+            <h3>Reach CHIYODA Global</h3>
+            <p><strong>Email</strong>Kiki20060102@vip.163.com</p>
+            <p><strong>Hotline</strong>+86 135-1033-0024</p>
+            <address>
+              <strong>Factory Address</strong>
+              No. 5, Youyi Road, Dongguan.
+            </address>
+          </aside>
+          <div class="contact-form-card">
+            <h3>Request a Quote</h3>
+            <form>
+              <div>
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+              </div>
+              <div>
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company" placeholder="Enter your company name" required>
+              </div>
+              <div>
+                <label for="email">Corporate Email</label>
+                <input type="email" id="email" name="email" placeholder="name@company.com" required>
+                <p class="form-note">Please use your corporate email address for faster response and approval.</p>
+              </div>
+              <div>
+                <label for="application">Application Field</label>
+                <select id="application" name="application" required>
+                  <option value="">Select an application</option>
+                  <option value="automotive">Automotive & New Energy</option>
+                  <option value="medical">Medical & Laboratory</option>
+                  <option value="office">Office Automation</option>
+                  <option value="consumer">Consumer Electronics</option>
+                  <option value="industrial">Industrial / Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="volume">Estimated Annual Volume</label>
+                <select id="volume" name="volume" required>
+                  <option value="">Select volume range</option>
+                  <option value="under50k">Under 50,000 units</option>
+                  <option value="50k-200k">50,000 - 200,000 units</option>
+                  <option value="200k-500k">200,000 - 500,000 units</option>
+                  <option value="500kplus">500,000+ units</option>
+                </select>
+              </div>
+              <div>
+                <label for="file">Upload Drawings/BOM</label>
+                <input type="file" id="file" name="file" accept=".pdf,.xls,.xlsx,.zip,.rar,.dwg" required>
+              </div>
+              <div>
+                <label for="message">Message / Requirements</label>
+                <textarea id="message" name="message" placeholder="Briefly describe your project requirements and any specific technical needs." required></textarea>
+              </div>
+              <button type="submit">Submit RFQ</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-copy">
+          <p>© 2026 CHIYODA Global. All rights reserved. Global locations span Japan, Hong Kong, Dongguan and Jiaxing, delivering premium wire harness solutions with global quality assurance.</p>
+        </div>
+        <div class="footer-locations">
+          <div class="location-card">
+            <h4>Japan</h4>
+            <p>Headquarters in Aichi, coordinating product engineering and international quality standards.</p>
+          </div>
+          <div class="location-card">
+            <h4>Hong Kong</h4>
+            <p>Regional office supporting sales, logistics, customer service and strategic market development.</p>
+          </div>
+          <div class="location-card">
+            <h4>Dongguan</h4>
+            <p>Advanced manufacturing plant focused on automotive, consumer and office automation assembly.</p>
+          </div>
+          <div class="location-card">
+            <h4>Jiaxing</h4>
+            <p>High-precision production facility for medical devices, peripherals and industrial harness manufacturing.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
