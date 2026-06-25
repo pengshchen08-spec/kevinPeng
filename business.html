@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>千代田電子 - 業務對接與客製化商務窗口</title>
+    <style>
+        /* 品牌高階色彩計畫 */
+        :root {
+            --primary-blue: #0B1B3D;    /* 寰宇深藍：日系大廠的絕對信任感 */
+            --accent-orange: #FF6B35;   /* 活力亮橘：業務端的高效與行動力 */
+            --bg-light: #F4F6F9;        /* 科技極簡灰底 */
+            --text-main: #1A202C;
+            --text-muted: #4A5568;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            box-sizing: border-box;
+        }
+
+        /* 頂部商務導覽列 */
+        .navbar {
+            background-color: var(--primary-blue);
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-orange);
+        }
+        .navbar .brand {
+            color: #FFFFFF;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+        .navbar .badge {
+            background-color: #00E676;
+            color: var(--primary-blue);
+            padding: 5px 14px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* 核心商務接單大橫幅 (Hero Section) */
+        .hero-section {
+            background: linear-gradient(135deg, #0B1B3D 0%, #172A45 100%);
+            color: #FFFFFF;
+            padding: 90px 8%;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 40px;
+            margin: 0 0 20px 0;
+            letter-spacing: 1px;
+        }
+        .hero-section p {
+            font-size: 18px;
+            max-width: 850px;
+            margin: 0 auto 45px auto;
+            color: #E2E8F0;
+            line-height: 1.8;
+        }
+        
+        /* 醒目的「線上詢價/需求提交」按鈕 */
+        .action-btn {
+            background-color: var(--accent-orange);
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 18px 45px;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
+            transition: all 0.3s ease;
+        }
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.6);
+        }
+
+        /* 主體內容容器 */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 70px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+        .section-header h2 {
+            font-size: 30px;
+            color: var(--primary-blue);
+            margin: 0 0 10px 0;
+        }
+        .section-header .line {
+            width: 50px;
+            height: 4px;
+            background-color: var(--accent-orange);
+            margin: 0 auto;
+        }
+
+        /* 三大業務領域卡片 */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-bottom: 80px;
+        }
+        .service-card {
+            background: #FFFFFF;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border-top: 4px solid var(--primary-blue);
+        }
+        .service-card h3 {
+            font-size: 22px;
+            color: var(--primary-blue);
+            margin: 0 0 15px 0;
+        }
+        .service-card p {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* 從千代田到千與田的一體化流程區塊 */
+        .flow-box {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            padding: 50px 40px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.03);
+        }
+        .flow-steps {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .flow-step {
+            flex: 1;
+            min-width: 260px;
+            position: relative;
+        }
+        .step-tag {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--accent-orange);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .flow-step h4 {
+            font-size: 18px;
+            color: var(--primary-blue);
+            margin: 0 0 12px 0;
+        }
+        .flow-step p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* 頁尾聯絡方式區塊 */
+        .footer-bar {
+            background-color: var(--primary-blue);
+            color: #FFFFFF;
+            padding: 60px 8% 40px 8%;
+            text-align: center;
+        }
+        .footer-bar h3 {
+            font-size: 26px;
+            margin: 0 0 15px 0;
+        }
+        .footer-bar p {
+            color: #CBD5E0;
+            margin: 0 0 35px 0;
+        }
+        .contacts {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        .contacts a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255,255,255,0.4);
+            padding-bottom: 4px;
+            transition: color 0.2s ease;
+        }
+        .contacts a:hover {
+            color: var(--accent-orange);
+            border-bottom-color: var(--accent-orange);
+        }
+        .copyright {
+            font-size: 13px;
+            color: #A0AEC0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="brand">CHIYODA ELECTRONICS</div>
+        <div class="badge">SBT 國際環保減排合規企業</div>
+    </div>
+
+    <div class="hero-section">
+        <h1>專注商務對接，驅動全球供應鏈</h1>
+        <p>千代田電子作為大客戶專屬商務窗口，精準對接您的各類線束與傳感器開發需求。我們將商務商談與技術打樣高效整合，並轉交旗下核心基地【千與田電子工廠】進行現代化綠色智造量產。</p>
+        <a href="#" class="action-btn">立即提交客製化規格 / 索取樣品與估價</a>
+    </div>
+
+    <div class="main-container">
+        
+        <div class="section-header">
+            <h2>客製化範疇與核心應用</h2>
+            <div class="line"></div>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>汽車移動出行線束</h3>
+                <p>承接新能源車載、智慧座艙、各類車用控制器的精密高階線束開發與大宗商務對接。</p>
+            </div>
+            <div class="service-card">
+                <h3>OA與工業自動化連接</h3>
+                <p>滿足複合印表機、工業機器人等內部高抗干擾、高速數據傳輸的連接系統客製化需求。</p>
+            </div>
+            <div class="service-card">
+                <h3>光電感測元器件</h3>
+                <p>提供日系頂級工藝的高精度光電開關、精密傳感器，以及非破壞性果實檢測儀器的商談引入。</p>
+            </div>
+        </div>
+
+        <div class="flow-box">
+            <div class="section-header">
+                <h2>從需求到量產：高效的一體化流程</h2>
+                <div class="line"></div>
+            </div>
+            <div class="flow-steps">
+                <div class="flow-step">
+                    <div class="step-tag">Step 01</div>
+                    <h4>千代田 · 商務窗口接單</h4>
+                    <p>客戶於本站提供規格或工程圖紙。千代田商務團隊一對一對接，迅速完成前期技術評估與打樣準備。</p>
+                </div>
+                <div class="flow-step">
+                    <div class="step-tag">Step 02</div>
+                    <h4>千與田 · 生產基地製造</h4>
+                    <p>確認樣品與訂單後，由千代田將訂單無縫轉交至千與田工廠，導入日系 5S 管理進行高效率安全生產。</p>
+                </div>
+                <div class="flow-step">
+                    <div class="step-tag">Step 03</div>
+                    <h4>國際合規 · 全球穩定交付</h4>
+                    <p>產品符合 ISO 9001/14001、UL 國際認證，全面導入 SBT 綠色供應鏈標準，按時保質交付至客戶手中。</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bar">
+        <h3>聯絡千代田商務對接窗口</h3>
+        <p>歡迎全球採購經理與工程師與我們建立聯繫，我們將為您提供最專業的供應鏈解決方案。</p>
+        
+        <div class="contacts">
+            <div>電話：<a href="tel:02-XXXX-XXXX">02-XXXX-XXXX</a></div>
+            <div>官方 LINE ID：<a href="https://line.me/R/ti/p/@您的ID" target="_blank">@chiyoda_biz</a></div>
+        </div>
+        
+        <div class="copyright">
+            Copyright © Chiyoda Electronics Co., Ltd. & Chiyoda-Factory All Rights Reserved.<br>
+            千代田電子積極推進 SBT 溫室氣體減排方針，助力全球大廠落實 ESG 綠色採購。
+        </div>
+    </div>
+
+</body>
+</html>
+
