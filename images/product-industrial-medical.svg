@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Industrial and medical wire harness">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#071B34"/>
+    </linearGradient>
+    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00C853"/>
+      <stop offset="100%" stop-color="#00E676"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg1)"/>
+  <circle cx="650" cy="90" r="120" fill="#00C853" opacity="0.08"/>
+  <rect x="120" y="160" width="560" height="220" rx="24" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <path d="M180 250 H620" stroke="#9FD4FF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M220 250 V210 M280 250 V190 M340 250 V220 M400 250 V180 M460 250 V210 M520 250 V195 M580 250 V225" stroke="#00C853" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="220" cy="210" r="14" fill="url(#accent1)"/>
+  <circle cx="400" cy="180" r="14" fill="url(#accent1)"/>
+  <circle cx="580" cy="225" r="14" fill="url(#accent1)"/>
+  <rect x="300" y="290" width="200" height="50" rx="12" fill="rgba(0,200,83,0.15)" stroke="rgba(0,200,83,0.35)"/>
+  <text x="400" y="322" text-anchor="middle" fill="#E8EFF8" font-family="system-ui,sans-serif" font-size="18" font-weight="600">Wire Harness Assembly</text>
+  <text x="400" y="420" text-anchor="middle" fill="#9FD4FF" font-family="system-ui,sans-serif" font-size="14">Industrial · Medical · Precision Equipment</text>
+</svg>

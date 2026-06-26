@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Office automation wiring">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1B3D"/>
+      <stop offset="100%" stop-color="#071B34"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg2)"/>
+  <rect x="200" y="110" width="400" height="280" rx="20" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <rect x="240" y="150" width="320" height="180" rx="8" fill="#0A2540" stroke="rgba(159,212,255,0.2)" stroke-width="2"/>
+  <rect x="270" y="180" width="260" height="8" rx="4" fill="#00C853" opacity="0.7"/>
+  <rect x="270" y="210" width="180" height="8" rx="4" fill="#9FD4FF" opacity="0.5"/>
+  <rect x="270" y="240" width="220" height="8" rx="4" fill="#9FD4FF" opacity="0.5"/>
+  <path d="M520 340 C560 300, 600 360, 640 320" stroke="#00C853" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <circle cx="640" cy="320" r="10" fill="#00C853"/>
+  <text x="400" y="430" text-anchor="middle" fill="#E8EFF8" font-family="system-ui,sans-serif" font-size="18" font-weight="600">Office Automation Wiring</text>
+  <text x="400" y="458" text-anchor="middle" fill="#9FD4FF" font-family="system-ui,sans-serif" font-size="14">Copiers · Printers · Building Systems</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Oishi Fruit measurement device">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#071B34"/>
+    </linearGradient>
+    <radialGradient id="fruit" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF8A50"/>
+      <stop offset="100%" stop-color="#E65100"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg4)"/>
+  <rect x="260" y="120" width="280" height="200" rx="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <rect x="300" y="160" width="200" height="100" rx="12" fill="#071B34" stroke="#00C853" stroke-width="2"/>
+  <circle cx="400" cy="210" r="36" fill="url(#fruit)"/>
+  <path d="M400 174 Q410 160 420 168" stroke="#00C853" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <rect x="340" y="280" width="120" height="12" rx="6" fill="#00C853" opacity="0.8"/>
+  <text x="400" y="370" text-anchor="middle" fill="#E8EFF8" font-family="system-ui,sans-serif" font-size="20" font-weight="600">Oishi Fruit JDWœ</text>
+  <text x="400" y="400" text-anchor="middle" fill="#9FD4FF" font-family="system-ui,sans-serif" font-size="14">Non-Destructive Sugar &amp; Ripeness Measurement</text>
+</svg>

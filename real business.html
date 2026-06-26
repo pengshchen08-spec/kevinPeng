@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CHIYODA Global | Precision Wire Harness Solutions</title>
+  <title>Chiyoda Electronics Co., Ltd. | Global Wire Harness Solutions</title>
   <style>
     :root {
       color-scheme: dark;
@@ -249,8 +249,79 @@
 
     #products .product-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 24px;
+    }
+
+    .official-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 28px;
+      margin-top: 18px;
+    }
+
+    .official-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #9FD4FF;
+      font-size: 0.95rem;
+      border-bottom: 1px solid rgba(159,212,255,0.35);
+      padding-bottom: 2px;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .official-link:hover {
+      color: #00C853;
+      border-color: rgba(0,200,83,0.45);
+    }
+
+    .clients-note {
+      margin-top: 28px;
+      padding: 22px 24px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #B8D7F0;
+      line-height: 1.8;
+    }
+
+    .clients-note strong {
+      color: #FFFFFF;
+    }
+
+    #process .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .process-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .process-card .step-label {
+      color: #00C853;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .process-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.15rem;
+      color: #FFFFFF;
+    }
+
+    .process-card p {
+      margin: 0;
+      color: #C9DCF2;
+      line-height: 1.8;
     }
 
     .product-card {
@@ -496,6 +567,7 @@
       .hero,
       #about .about-grid,
       #products .product-grid,
+      #process .process-grid,
       #capabilities .capabilities-grid,
       #contact .contact-grid,
       .footer-container,
@@ -554,14 +626,15 @@
   <div class="site-wrapper">
     <header>
       <div class="nav-container">
-        <a class="brand" href="#home">CHIYODA Global</a>
+        <a class="brand" href="#home">Chiyoda Electronics</a>
         <nav>
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#products">Products</a></li>
-            <li><a href="#capabilities">Capabilities</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#process">How We Work</a></li>
+            <li><a href="#capabilities">Quality</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -569,106 +642,138 @@
     <main>
       <section id="home" class="hero">
         <div class="hero-copy">
-          <h1>Precision Wire Harness Solutions Since 1969</h1>
-          <p>Delivering international engineering excellence for automotive, medical, office automation, high-end consumer products and critical industrial systems. CHIYODA Global blends heritage manufacturing with modern lean production.</p>
+          <h1>Your International Gateway to Precision Wire Harness Manufacturing</h1>
+          <p>Chiyoda Electronics serves as the dedicated overseas business interface for the Chiyoda Group — handling RFQs, technical review and customer coordination. Confirmed orders are transferred to <strong>Qianyutian Electronics</strong>, our core manufacturing base in Dongguan, for automated high-volume production and export delivery.</p>
           <a class="hero-button" href="#contact">Request a Quote</a>
+          <div class="official-links">
+            <a class="official-link" href="https://www.chiyoda-denshi.co.jp/" target="_blank" rel="noopener noreferrer">Japan corporate site →</a>
+            <a class="official-link" href="https://dgchiyoda.com/" target="_blank" rel="noopener noreferrer">Qianyutian manufacturing site →</a>
+          </div>
         </div>
         <div class="hero-visual">
           <div class="hero-panel">
-            <h2>Global Engineering, Local Execution</h2>
+            <h2>Chiyoda Front Office, Qianyutian Factory Floor</h2>
             <ul>
-              <li>Japan headquarters coordinating global standards and quality.</li>
-              <li>Hong Kong office supporting sales, export logistics and customer service.</li>
-              <li>Advanced manufacturing facilities in Dongguan and Jiaxing for high-volume production.</li>
-              <li>Rigorous product validation and eco-friendly manufacturing processes.</li>
+              <li><strong>Chiyoda</strong> — international sales, specification intake and project coordination for overseas buyers.</li>
+              <li><strong>Qianyutian (Dongguan)</strong> — primary mass-production plant with fully automatic crimping, welding and inspection lines.</li>
+              <li><strong>Chiyoyoda (Hong Kong)</strong> — export logistics and cross-border customer support.</li>
+              <li><strong>Japan HQ (Toyokawa)</strong> — engineering standards, prototyping and group quality governance.</li>
             </ul>
           </div>
         </div>
       </section>
       <section id="about">
-        <h2 class="section-title">About CHIYODA Group</h2>
-        <p class="section-subtitle">Founded in 1969 in Aichi, Japan, CHIYODA Group combines five decades of legacy with contemporary global manufacturing, serving international OEMs and technical partners with reliable wire harness systems.</p>
+        <h2 class="section-title">How Chiyoda &amp; Qianyutian Work Together</h2>
+        <p class="section-subtitle">Chiyoda Electronics Co., Ltd. (千代田電子工業) is the group's international commercial interface. Dongguan Qianyutian Electronics Co., Ltd. (东莞千与田电子有限公司) is the core manufacturing entity that executes volume production for export programs.</p>
         <div class="about-grid">
           <div class="about-card">
-            <p>Founded in 1969 in Aichi, Japan, CHIYODA Group has more than 50 years of expertise in precision wire harness manufacturing. Our heritage is built on quality, customer satisfaction, and continuous innovation in global production.</p>
-            <p>Total group sales reach 10 Billion JPY, supporting major global brands through integrated engineering, design validation, and advanced factory management.</p>
+            <p><strong>Chiyoda — Business &amp; Technical Interface</strong><br>Overseas customers engage Chiyoda for RFQs, drawing review, sampling coordination and account management. Chiyoda consolidates requirements and aligns them with Japan HQ engineering standards before release to production.</p>
+            <p><strong>Qianyutian — Manufacturing Execution</strong><br>Once samples and orders are confirmed, production is transferred to Qianyutian's Dongguan plant — equipped with fully automatic processing for crimping, welding, adhesive application and cable assembly at scale.</p>
           </div>
           <div class="about-card">
             <ul>
-              <li>Global footprint with Japan headquarters and Hong Kong regional office.</li>
-              <li>Advanced production plants in Dongguan and Jiaxing with 15,000 m² capacity.</li>
-              <li>220+ skilled staff delivering consistent quality and rapid turn-key execution.</li>
-              <li>Mission: Customer Satisfaction First with eco-friendly manufacturing and compliance-focused supply chains.</li>
+              <li>Chiyoda HQ: 3-14-4 Honohara, Toyokawa, Aichi 442-8511, Japan · +81-533-84-3111</li>
+              <li>Qianyutian Plant: No. 5 Youyi Road, Qinghutou, Tangxia, Dongguan, Guangdong, China · +86-769-8729-0850</li>
+              <li>Chiyoyoda (Hong Kong) — export sales and logistics coordination.</li>
+              <li>Chiyoda Electronics (Jiaxing) — additional ISO-certified capacity for high-volume programs.</li>
+              <li>1,000+ terminal types supported; UL-labeled harness assemblies available upon request.</li>
             </ul>
           </div>
         </div>
       </section>
       <section id="products">
-        <h2 class="section-title">Products</h2>
-        <p class="section-subtitle">Our product portfolio spans high-reliability harness systems for automotive, medical, office automation and premium consumer segments with robust design, testing and certification coverage.</p>
+        <h2 class="section-title">Products &amp; Applications</h2>
+        <p class="section-subtitle">Aligned with our Japan product portfolio, we support international OEMs across industrial, medical, office automation and agricultural measurement markets.</p>
         <div class="product-grid">
           <article class="product-card">
-            <h3>Automotive & New Energy Harnesses</h3>
-            <p>Air conditioning wiring, tail lights, EV charging guns and advanced harness systems. Fully IATF 16949:2016 compliant for modern automotive manufacturing.</p>
+            <h3>Industrial &amp; Medical Wire Harnesses</h3>
+            <p>Custom harness design and manufacturing for industrial machinery, medical devices and precision equipment — from engineering validation through volume production.</p>
           </article>
           <article class="product-card">
-            <h3>Medical & Laboratory Equipment</h3>
-            <p>Precision assemblies for blood glucose monitors, diabetes testing equipment and urine analyzers designed for medical reliability and repeatable performance.</p>
+            <h3>Office Automation &amp; Building Equipment</h3>
+            <p>High-reliability wiring assemblies for copiers, printers, HVAC and building systems, serving global office automation and facility equipment manufacturers.</p>
           </article>
           <article class="product-card">
-            <h3>Office Automation Wiring</h3>
-            <p>High-durability crimping solutions for copiers and printers trusted by Konica Minolta, Ricoh, RISO, and Fuji Xerox with long-life precision harnesses.</p>
+            <h3>Harness Components &amp; Parts Supply</h3>
+            <p>Distribution of harness-related components from leading Japanese and international connector and wire manufacturers to support your bill of materials and sourcing needs.</p>
           </article>
           <article class="product-card">
-            <h3>High-End Consumer & Peripherals</h3>
-            <p>Luxury peripheral cables, 4K/8K video split solutions, high-fidelity audio wiring, ATM harnesses and gaming peripheral interconnects with premium engineering.</p>
+            <h3>Oishi Fruit — Non-Destructive Fruit Measurement</h3>
+            <p>Our proprietary Oishi Fruit instrument measures fruit sugar content and ripeness without damage — supporting agricultural quality control, branding and export grading programs.</p>
+          </article>
+        </div>
+        <div class="clients-note">
+          <strong>Trusted by leading manufacturers</strong> including Konica Minolta, Ricoh, Panasonic Eco Solutions, Fujifilm, Mitsubishi Electric, Omron and other global electronics brands. Contact us for application-specific references.
+        </div>
+      </section>
+      <section id="process">
+        <h2 class="section-title">From Inquiry to Mass Production</h2>
+        <p class="section-subtitle">A streamlined three-step workflow — Chiyoda handles the commercial front end, Qianyutian delivers the factory output.</p>
+        <div class="process-grid">
+          <article class="process-card">
+            <div class="step-label">Step 01</div>
+            <h3>Chiyoda — Commercial Intake</h3>
+            <p>Submit your specifications or engineering drawings through this portal. The Chiyoda business team provides one-on-one support, technical assessment and sampling preparation for overseas buyers.</p>
+          </article>
+          <article class="process-card">
+            <div class="step-label">Step 02</div>
+            <h3>Qianyutian — Factory Production</h3>
+            <p>After sample approval, orders are seamlessly transferred to Qianyutian's Dongguan plant. Japanese 5S management practices drive efficient, safe and consistent mass production on fully automatic lines.</p>
+          </article>
+          <article class="process-card">
+            <div class="step-label">Step 03</div>
+            <h3>Certified Global Delivery</h3>
+            <p>Products meet ISO 9001, ISO 14001 and UL requirements. Stable, on-time export delivery to international customers through our Hong Kong logistics coordination.</p>
           </article>
         </div>
       </section>
       <section id="capabilities">
-        <h2 class="section-title">Manufacturing Capability</h2>
-        <p class="section-subtitle">Operating a 15,000 m² plant with over 220 skilled staff, CHIYODA Group delivers complex assemblies with fully automated crimping, cross-section validation, environmental testing and quality management systems.</p>
+        <h2 class="section-title">Qianyutian Manufacturing Capability</h2>
+        <p class="section-subtitle">Core production is executed at Dongguan Qianyutian Electronics — ISO and UL certified, with fully automatic equipment for high quality at competitive cost.</p>
         <div class="capabilities-grid">
           <div class="capability-summary">
-            <p>Our manufacturing combines advanced automation and rigorous quality control to support demanding industries. Dedicated equipment and process control ensure consistency in production and fast time-to-market.</p>
+            <p><strong>Processing scope:</strong> Crimping, welding, adhesive application and cable assembly across diverse specifications — primarily on fully automatic equipment for consistent quality and cost efficiency.</p>
+            <p><strong>Terminal coverage:</strong> More than 1,000 crimp terminal types, with UL label compliance available for certified wire harness assemblies.</p>
+            <p><strong>Certifications:</strong> ISO 9001 and ISO 14001 quality and environmental management; UL-registered harness production program across group factories.</p>
             <ul class="badge-list">
-              <li>IATF 16949:2016</li>
               <li>ISO 9001</li>
               <li>ISO 14001</li>
-              <li>UL</li>
+              <li>UL Registered</li>
+              <li>1,000+ Terminals</li>
+              <li>Fully Automatic Lines</li>
             </ul>
           </div>
           <table class="capability-table">
             <thead>
               <tr>
-                <th>Equipment</th>
-                <th>Description</th>
+                <th>Capability</th>
+                <th>Details</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>KOMAX fully automatic crimping machines</td>
-                <td>Precision high-volume processing for automotive and industrial harnesses.</td>
+                <td>Crimping</td>
+                <td>Fully automatic crimping and insertion for high-volume harness processing</td>
               </tr>
               <tr>
-                <td>JAM fully automatic crimping machines</td>
-                <td>Reliable automated assembly for medical, office and consumer wiring products.</td>
+                <td>Welding</td>
+                <td>Automated splice and termination welding for industrial and OA harnesses</td>
               </tr>
               <tr>
-                <td>SHINMAYWA fully automatic crimping machines</td>
-                <td>Robust automation for high-speed harness production and process consistency.</td>
+                <td>Adhesive &amp; cable work</td>
+                <td>Multi-process assembly covering glue application and custom cable builds</td>
               </tr>
               <tr>
-                <td>TYCO AMP fully automatic crimping machines</td>
-                <td>Industry-leading tooling for secure and repeatable connections.</td>
+                <td>Terminal range</td>
+                <td>1,000+ terminal types — see Qianyutian site for full processing list</td>
               </tr>
               <tr>
-                <td>Cross-section analyzers</td>
-                <td>Detailed internal validation of crimp integrity and wire structure.</td>
+                <td>UL compliance</td>
+                <td>UL-labeled harness assemblies using UL-certified wire upon request</td>
               </tr>
               <tr>
-                <td>Salt spray testers</td>
-                <td>Environmental durability testing for corrosion resistance and long life.</td>
+                <td>Production plant</td>
+                <td>Dongguan Qianyutian Electronics · <a href="https://dgchiyoda.com/" target="_blank" rel="noopener noreferrer" style="color:#9FD4FF">dgchiyoda.com</a></td>
               </tr>
             </tbody>
           </table>
@@ -676,15 +781,23 @@
       </section>
       <section id="contact">
         <h2 class="section-title">Contact Us</h2>
-        <p class="section-subtitle">Submit your RFQ and technical requirements to discuss project specifications, volume forecasts and delivery timelines.</p>
+        <p class="section-subtitle">Submit your RFQ to the Chiyoda international business team. Production inquiries can also reach Qianyutian's factory service hotline directly.</p>
         <div class="contact-grid">
           <aside class="contact-info">
-            <h3>Reach CHIYODA Global</h3>
-            <p><strong>Email</strong>Kiki20060102@vip.163.com</p>
-            <p><strong>Hotline</strong>+86 135-1033-0024</p>
+            <h3>Chiyoda — International Business</h3>
+            <p><strong>Overseas Sales Email</strong>Kiki20060102@vip.163.com</p>
+            <p><strong>Overseas Sales Hotline</strong>+86 135-1033-0024</p>
+            <p><strong>Japan HQ (Group)</strong>+81-533-84-3111</p>
             <address>
-              <strong>Factory Address</strong>
-              No. 5, Youyi Road, Dongguan.
+              <strong>Qianyutian Plant — Core Manufacturing</strong>
+              No. 5 Youyi Road, Qinghutou, Tangxia, Dongguan, Guangdong, China<br>
+              Factory Hotline: +86-769-8729-0850<br>
+              <a href="https://dgchiyoda.com/" target="_blank" rel="noopener noreferrer" style="color:#9FD4FF">dgchiyoda.com</a>
+            </address>
+            <address>
+              <strong>Chiyoda Electronics (Jiaxing)</strong>
+              No. 116 Jinjiabang Street, Jiaxing Economic &amp; Technological Development Zone, Zhejiang, China<br>
+              Tel: +86-573-8359-9668
             </address>
           </aside>
           <div class="contact-form-card">
@@ -707,11 +820,12 @@
                 <label for="application">Application Field</label>
                 <select id="application" name="application" required>
                   <option value="">Select an application</option>
-                  <option value="automotive">Automotive & New Energy</option>
+                  <option value="industrial">Industrial Equipment</option>
                   <option value="medical">Medical & Laboratory</option>
                   <option value="office">Office Automation</option>
-                  <option value="consumer">Consumer Electronics</option>
-                  <option value="industrial">Industrial / Other</option>
+                  <option value="building">Building / HVAC Equipment</option>
+                  <option value="oishifruit">Oishi Fruit Measurement</option>
+                  <option value="other">Other / Components Supply</option>
                 </select>
               </div>
               <div>
@@ -741,24 +855,27 @@
     <footer>
       <div class="footer-container">
         <div class="footer-copy">
-          <p>© 2026 CHIYODA Global. All rights reserved. Global locations span Japan, Hong Kong, Dongguan and Jiaxing, delivering premium wire harness solutions with global quality assurance.</p>
+          <p>© 2026 Chiyoda Electronics Co., Ltd. &amp; Dongguan Qianyutian Electronics Co., Ltd. International business portal for overseas customers.<br>
+            Japan corporate: <a href="https://www.chiyoda-denshi.co.jp/" target="_blank" rel="noopener noreferrer" style="color:#9FD4FF">chiyoda-denshi.co.jp</a> ·
+            Manufacturing: <a href="https://dgchiyoda.com/" target="_blank" rel="noopener noreferrer" style="color:#9FD4FF">dgchiyoda.com</a>
+          </p>
         </div>
         <div class="footer-locations">
           <div class="location-card">
-            <h4>Japan</h4>
-            <p>Headquarters in Aichi, coordinating product engineering and international quality standards.</p>
+            <h4>Chiyoda — Toyokawa, Japan</h4>
+            <p>Group headquarters and international commercial interface — engineering standards and customer coordination.</p>
           </div>
           <div class="location-card">
-            <h4>Hong Kong</h4>
-            <p>Regional office supporting sales, logistics, customer service and strategic market development.</p>
+            <h4>Qianyutian — Dongguan, China</h4>
+            <p>Core manufacturing base — fully automatic crimping, welding and harness assembly for export volume production.</p>
           </div>
           <div class="location-card">
-            <h4>Dongguan</h4>
-            <p>Advanced manufacturing plant focused on automotive, consumer and office automation assembly.</p>
+            <h4>Chiyoyoda — Hong Kong</h4>
+            <p>Export logistics, cross-border sales support and overseas delivery coordination.</p>
           </div>
           <div class="location-card">
-            <h4>Jiaxing</h4>
-            <p>High-precision production facility for medical devices, peripherals and industrial harness manufacturing.</p>
+            <h4>Chiyoda — Jiaxing, China</h4>
+            <p>Supplementary ISO-certified production capacity for large-scale international programs.</p>
           </div>
         </div>
       </div>
